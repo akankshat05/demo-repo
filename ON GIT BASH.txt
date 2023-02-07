@@ -1,0 +1,23 @@
+ON GIT BASH
+1. start ssh agent
+// eval "$(ssh-agent -s)"
+2. add identity
+// ssh-add ~/.ssh/id_ed25519(add some name)
+
+IN .ssh folder
+1. create a config file
+2. add below details
+    Host (alias) github.com
+        HostName github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_ed25519(add some name)
+(on github add ssh key first)
+
+Finally, with repos :
+
+CLONING
+git@github.com:(username)/(repo name).git
+
+CD AND GO TO THE REPO
+git config user.email "my-personal-email@gmail.com"
+git config user.name "Rahul Pandey"
